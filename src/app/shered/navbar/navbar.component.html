@@ -1,0 +1,191 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-mainColor w-100 py-1">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <a routerLink='/Home' class="d-flex col-md-1">
+        <img src="../../../assets/noon-black-ar.svg" alt="">
+      </a>
+      <div class="col-md-7">
+        <input class="form-control me-2" type="search" placeholder="انت بتدور ع ايه ؟" aria-label="Search">
+      </div>
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 col-md-4 d-flex align-items-center">
+        <li class="nav-item col-md-1">
+          <a class="nav-link active px-1" aria-current="page" href="#">english</a>
+        </li>
+        <li class="nav-item dropdown col-md-4">
+          <a class="nav-link bg-transparent border-0 d-flex" href="#" id="navbarDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            <div class="p-2"><img src="../../../assets/eg.svg" alt="flag"></div>
+            <div class="d-flex flex-column">
+              <span>الشحن إلى</span>
+              <span>مصر</span>
+            </div>
+            <div class="arow"></div>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="min-width: 16rem;">
+            <li class="text-end ">
+              <a class="dropdown-item d-flex" href="#">
+                <div><img class="ps-2" src="../../../assets/eg.svg" alt="">مصر</div>
+                <div><input type="radio" name="" id=""></div>
+              </a>
+            </li>
+            <li class="text-end">
+              <a class="dropdown-item d-flex" href="#">
+                <div><img class="ps-2" src="../../../assets/eg.svg" alt="">مصر</div>
+                <div><input type="radio" name="" id=""></div>
+              </a>
+            </li>
+            <li class="text-end">
+              <a class="dropdown-item d-flex" href="#">
+                <div><img class="ps-2" src="../../../assets/eg.svg" alt="">مصر</div>
+                <div><input type="radio" name="" id=""></div>
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item col-md-3 d-flex ">
+          <button type="button" class="nav-link border-0 bg-transparent" data-bs-toggle="modal"
+            data-bs-target="#exampleModal">
+            تسجيل الدخول
+            <i class="far my-2 fa-user"></i>
+          </button>
+
+        </li>
+        <li class="nav-item col-md-4 border-end border-dark d-flex">
+          <a class="nav-link" href="#" tabindex="-1">عرابه التسويق</a>
+          <img src="../../../assets/cart.svg" alt="">
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" [ngSwitch]="show">
+    <div class="modal-content" *ngSwitchCase= 0  >
+      <div class="modal-header border-0">
+        <button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="sc-1v3qw6e-2 iTbbaG">
+          <h2 class="text-center">أهلا بيك تاني!</h2>
+          <h2 class="text-center">تسجيل الدخول إلى حسابك</h2>
+          <div class="text-center">
+            <h3 class=" my-2 mx-0 fs-6 d-inline">لسه معندكش حساب؟</h3>
+            <h3 class="  fs-6 d-inline kIhkow" (click)="showAntherSection(1)">اشترك الآن</h3>
+          </div>
+          <div class="sc-1gcofxm-0 cFyQs mt-5"><label class="sc-1gcofxm-3 kjguhn rtl-right labelforInput">البريد
+              الإلكتروني</label><input id="emailInput" type="text" class="sc-1gcofxm-1 gkrVsJ" value=""><span
+              class="sc-1gcofxm-2 ebtXEW"></span>
+            <div
+              style="transition: opacity 250ms ease-in-out 0s, visibility 100ms ease-in-out 250ms; z-index: 1; opacity: 0; visibility: hidden;">
+              <p data-qa="lbl_emailError" class="sc-1gcofxm-4 ixDQhs"></p>
+            </div>
+          </div>
+          <div class="sc-1gcofxm-0 cFyQs mb-5"><label class="sc-1gcofxm-3 kjguhn rtl-right labelforInput">كلمه
+              السر</label>
+            <div class="sc-619awf-6 lfoaKl d-flex"><input id="passwordInput" type="password" class="sc-1gcofxm-1 gkrVsJ"
+                value=""><button tabindex="-1" class="inpits chFNYa"><img
+                  src="https://z.nooncdn.com/s/app/com/common/icons/eye-closed.svg"
+                  alt="عرض/إخفاء كلمة المرور"></button></div><span class="sc-619awf-2 ebtXEW"></span>
+            <div data-qa="lbl_passwordError" class="sc-619awf-4 owXxD">
+              <div
+                style="transition: opacity 250ms ease-in-out 0s, visibility 100ms ease-in-out 250ms; z-index: 1; opacity: 0; visibility: hidden;">
+                <div class="error-message"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="text-center text-decoration-none kIhkow" (click)="showAntherSection(2)">نسيت كلمة السر؟</a>
+      <div class="sc-1v3qw6e-8 bjCFTe"><button id="login-submit" data-qa="btn_تسجيل الدخول"
+          class="sc-1v3qw6e-9 hkPdki confirm border-0 bg-transparent">تسجيل الدخول</button></div>
+    </div>
+    <div class="modal-content" *ngSwitchCase= 1>
+      <div class="modal-header border-0">
+        <button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="sc-1v3qw6e-2 iTbbaG">
+          <h2 class="text-center" >انشاء حساب</h2>
+          <div class="text-center">
+            <h3 class=" my-2 mx-0 fs-6 d-inline">هل لديك حساب بالفعل</h3>
+            <h3 class="  fs-6 d-inline kIhkow" (click)="showAntherSection(0)">تسجيل دخول</h3>
+          </div>
+          <div class="sc-1gcofxm-0 cFyQs mt-5"><label class="sc-1gcofxm-3 kjguhn rtl-right labelforInput">البريد
+              الإلكتروني</label><input id="emailInput" type="text" class="sc-1gcofxm-1 gkrVsJ" value=""><span
+              class="sc-1gcofxm-2 ebtXEW"></span>
+            <div
+              style="transition: opacity 250ms ease-in-out 0s, visibility 100ms ease-in-out 250ms; z-index: 1; opacity: 0; visibility: hidden;">
+              <p data-qa="lbl_emailError" class="sc-1gcofxm-4 ixDQhs"></p>
+            </div>
+          </div>
+          <div class="sc-1gcofxm-0 cFyQs mb-5"><label class="sc-1gcofxm-3 kjguhn rtl-right labelforInput">كلمه
+              السر</label>
+            <div class="sc-619awf-6 lfoaKl d-flex"><input id="passwordInput" type="password" class="sc-1gcofxm-1 gkrVsJ"
+                value=""><button tabindex="-1" class="inpits chFNYa"><img
+                  src="https://z.nooncdn.com/s/app/com/common/icons/eye-closed.svg"
+                  alt="عرض/إخفاء كلمة المرور"></button></div><span class="sc-619awf-2 ebtXEW"></span>
+            <div data-qa="lbl_passwordError" class="sc-619awf-4 owXxD">
+              <div
+                style="transition: opacity 250ms ease-in-out 0s, visibility 100ms ease-in-out 250ms; z-index: 1; opacity: 0; visibility: hidden;">
+                <div class="error-message"></div>
+              </div>
+            </div>
+          </div>
+          <div class="sc-1gcofxm-0 cFyQs mt-5"><label class="sc-1gcofxm-3 kjguhn rtl-right labelforInput">الاسم الاول</label><input id="emailInput" type="text" class="sc-1gcofxm-1 gkrVsJ" value=""><span
+            class="sc-1gcofxm-2 ebtXEW"></span>
+          <div
+            style="transition: opacity 250ms ease-in-out 0s, visibility 100ms ease-in-out 250ms; z-index: 1; opacity: 0; visibility: hidden;">
+            <p data-qa="lbl_emailError" class="sc-1gcofxm-4 ixDQhs"></p>
+          </div>
+        </div>
+        <div class="sc-1gcofxm-0 cFyQs mb-5"><label class="sc-1gcofxm-3 kjguhn rtl-right labelforInput">اسم العائل</label>
+          <div class="sc-619awf-6 lfoaKl d-flex"><input id="passwordInput" type="password" class="sc-1gcofxm-1 gkrVsJ"
+              value=""><button tabindex="-1" class="inpits chFNYa"></button></div><span class="sc-619awf-2 ebtXEW"></span>
+          <div  class="sc-619awf-4 owXxD">
+            <div
+              style="transition: opacity 250ms ease-in-out 0s, visibility 100ms ease-in-out 250ms; z-index: 1; opacity: 0; visibility: hidden;">
+              <div class="error-message"></div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+      <div class="sc-1v3qw6e-8 bjCFTe"><button 
+          class="sc-1v3qw6e-9 hkPdki confirm border-0 bg-transparent">انشاء حساب</button></div>
+    </div>
+    <div class="modal-content" *ngSwitchCase= 2>
+      <div class="modal-header border-0">
+        <button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="position-fixed hiCkFL" (click)="showAntherSection(0)"><img class="" src="https://z.nooncdn.com/s/app/com/common/icons/chevron-right.svg" alt="Back"><p class="px-2 pt-2">رجوع</p></div>
+      </div>
+      <div class="modal-body">
+        <div class="sc-1v3qw6e-2 iTbbaG">
+          <h2 class="text-center">نسيت كلمة السر؟</h2>
+          <div class="text-center">
+            <h5 class=" my-2 mx-0  d-inline">اكتب إيميلك وهنبعتلك عليه رابط عشان تغير كلمة السر الخاصة بيك.</h5>
+          </div>
+          <div class="sc-1gcofxm-0 cFyQs my-5"><label class="sc-1gcofxm-3 kjguhn rtl-right labelforInput">البريد
+              الإلكتروني</label><input id="emailInput" type="text" class="sc-1gcofxm-1 gkrVsJ" value=""><span
+              class="sc-1gcofxm-2 ebtXEW"></span>
+            <div
+              style="transition: opacity 250ms ease-in-out 0s, visibility 100ms ease-in-out 250ms; z-index: 1; opacity: 0; visibility: hidden;">
+              <p data-qa="lbl_emailError" class="sc-1gcofxm-4 ixDQhs"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sc-1v3qw6e-8 bjCFTe"><button 
+          class="sc-1v3qw6e-9 hkPdki confirm border-0 bg-transparent">ادخل البريد الالكتروني</button></div>
+    </div>
+  </div>
+</div>
+
+
+<app-part-nav class="w-100"></app-part-nav>

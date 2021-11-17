@@ -1,0 +1,9 @@
+<section>
+    <div id="scroll" class="d-flex flex-column position-fixed">
+        <div class="category pb-3" *ngFor='let shop of shops' routerLink="/shop/{{shopId1}}/product/{{shop.id}}">
+            <span>{{shop.category_name_ar}}</span>
+            <img class="w-100 h-100" [src]="shop.photo"  alt=""  ><!--routerLink="/shop/{{shopId1}}/product/{{shop.id}}"-->
+        </div>
+
+    </div>
+</section>

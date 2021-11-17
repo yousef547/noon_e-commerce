@@ -1,0 +1,33 @@
+<!-- <div *ngFor="let product of products">
+    <div *ngIf="product.main_category_id == productId" >
+        <img [src]="product.photo" alt="">
+        <span>{{product.name_ar}}</span>
+    </div>
+</div> -->
+<app-all-catagrory></app-all-catagrory>
+<section id="card">
+    <div class="container">
+        <div class="row">
+            <div class=" col-md-4" *ngFor="let prod of prods">
+                <div class="card mt-5"  >
+                    <img [src]="prod.photo" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">{{prod.name_ar}}</h5>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">خصم:{{prod.offers}}</li>
+                      <li class="list-group-item">{{prod.description_ar}}</li>
+                      <li class="list-group-item">السعر: {{prod.price}}</li>
+                    </ul>
+                    <div class="card-body">
+                      <a routerLink="/details/show/{{prod.id}}" class="card-link">تفاصيل</a>
+                    </div>
+                  </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<app-all-catagrory></app-all-catagrory>
+
+<app-loading *ngIf="spiner"></app-loading>

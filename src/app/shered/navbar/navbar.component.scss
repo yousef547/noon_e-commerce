@@ -1,0 +1,194 @@
+@import "../../../styles.scss";
+.bg-mainColor{
+    background-color: $mainColor !important;
+}
+.navbar {
+    z-index: 99999999;
+}
+form input::placeholder {
+    text-align: right;
+}
+
+.modal-header .btn-close {
+    margin: -0.5rem 26.5rem -0.5rem auto;
+}
+.kIhkow {
+    margin: 12px 5px;
+    color: rgb(56, 102, 223);
+    cursor: pointer;
+}
+.kjguhn {
+    color: rgb(126, 133, 155);
+    font-size: 1rem;
+    max-width: 100%;
+    pointer-events: none;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    transition: all 0.2s ease 0s;
+}
+.gkrVsJ {
+    background: transparent;
+    font-size: 16px;
+    color: rgb(64, 69, 83);
+    display: block;
+    width: 100%;
+    border-top: initial;
+    border-right: initial;
+    border-left: initial;
+    user-select: text;
+    transform: none;
+    cursor: auto;
+    border-image: initial;
+    border-bottom: 1px solid rgb(226, 229, 241);
+}
+.inpits{
+    width: 95%;
+}
+.bjCFTe {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    border-top: 1px solid rgb(226, 229, 241);
+}
+.hiCkFL {
+    display: flex;
+    color: rgb(64, 69, 83);
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 20px;
+    cursor: pointer;}
+.hkPdki {
+    flex: 1 1 0%;
+    text-align: center;
+    font-size: 1.25rem;
+    color: rgb(56, 102, 223);
+    font-weight: 600;
+    padding: 18px 0px;
+    text-transform: uppercase;
+}
+.chFNYa {
+    display: flex;
+    width: 5%;
+    position: relative;
+    height: 21px;
+    left: 35px;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+}
+.ebtXEW {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+.cFyQs {
+    position: relative;
+    margin-bottom: 10px;
+    width: 100%;
+}
+.dropdown-menu input {
+    position: relative;
+right: 120px;
+}
+
+
+
+
+
+
+.menu {
+    width: 100%;
+    z-index: 10000;
+}
+.lists {
+    height: 60px
+}
+
+.edit {
+    top: 99px;
+    right: 165px;
+    position:absolute;
+}
+.lists li {
+    min-width: 5%;
+    cursor: pointer;
+    height: 100%;
+    line-height: 3;
+    padding: 0 5px;
+    text-align: center;
+}
+.lists li:hover {
+    background-color: #fff;
+    box-shadow: rgb(0 0 0 / 18%) 0px 5px 4px 0px
+}
+
+.menu .disc {
+    position: absolute;
+    display: none;
+    width: 100%;
+    top: 0;
+    background-color: #fff;
+    z-index: 1000;
+}
+
+#overlay{
+   height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.hovers {
+   display: block !important;
+    transition: all 0.5s ease-in-out
+}
+.category li {
+    list-style: none;
+    line-height: 3;
+    display: block;
+}
+.category a , .detail a , .catsColumn a {
+    text-decoration: none;
+    color: #000;
+}
+.selected  a{
+    color: $textColor;
+}
+.catagres .catagre {
+    display: none;
+}
+.topBar{
+    border-bottom: 1px solid rgb(241, 243, 249);
+    padding-bottom: 10px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: rgb(64, 69, 83);
+}
+.subtitle {
+    font-weight: 700;
+    cursor: default;
+}
+.detail a ,.catsColumn a {
+    line-height: 2.5;
+    display: block;
+}
+
+.detail a:hover , .catsColumn a:hover{
+    color: $textColor;
+}
+.heading {
+    font-size: 0.928571rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+    margin: 16px 2rem 16px 0 ;
+
+}
+.brandsColumn ul li {
+    padding: 5px;
+}
+.brandsColumn ul li img {
+    border: 1px solid #eee;
+    
+}
+app-part-nav {
+    width: 100%;
+}

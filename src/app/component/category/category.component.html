@@ -1,0 +1,40 @@
+<!-- <div *ngFor='let prod of productA' >
+    <div *ngIf="prod.main_category_id == product">
+        <span>{{prod.main_category_id}}</span>
+        <img [src]="prod.photo" alt="">
+        <span>{{prod.address}}</span>
+        <span>{{prod.phone}}</span>
+        <span>{{prod.seller_name}}</span>
+        <span>{{prod.store_name}}</span>
+        <span>{{prod.email}}</span>
+        <span>{{prod.id}}</span>
+        <span><a routerLink="/shop/{{prod.main_category_id}}">زياره</a></span>
+    </div>
+</div> -->
+<section>
+    <div class="container">
+        <div class="row">
+            <div *ngFor='let prod of productA' class="col-md-12">
+                <div *ngIf="prod.main_category_id == product" class="row">
+                    <div class="col-md-6">
+                        <img [src]="prod.photo" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-md-6">
+                        <span>{{prod.main_category_id}}</span>
+                        <span>{{prod.address}}</span>
+                        <span>{{prod.phone}}</span>
+                        <span>{{prod.seller_name}}</span>
+                        <span>{{prod.store_name}}</span>
+                        <span>{{prod.email}}</span>
+                        <span>{{prod.id}}</span>
+                        <span><a routerLink="/shop/{{prod.main_category_id}}">زياره</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<app-loading *ngIf="spiner"></app-loading>
+
+<!-- <img [src]="productA.photo" class="w-25" alt="">
+<span>{{productA.name_ar}}</span> --> 

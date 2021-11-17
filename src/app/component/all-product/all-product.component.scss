@@ -1,0 +1,46 @@
+#card {
+    width: 92%;
+}
+.imgs {
+    height: 65%;
+}
+.card {
+    height: 350px;
+}
+.details {
+    display: flex;
+    padding:0 15px 0 0;
+    flex-direction: column;
+}
+
+
+
+
+
+.filter{
+    z-index: 10000;
+    top: 19.5%;
+    right: -16%;
+}
+.form {
+    overflow: auto;
+}
+.info {
+    width: 250px;
+    height: 80.5vh;
+    background-color: #F7F7FA;
+}
+.icon {
+    position: absolute;
+    left: -46px;
+    border: 2px solid #ccc;
+    background: #F7F7FA;
+    top: 50px;
+    border-top-left-radius: 25%;
+    border-bottom-left-radius: 25%;
+    cursor: pointer;
+}
+label{
+width: 75%;
+text-align: center;
+}

@@ -1,0 +1,93 @@
+@import "../../../styles.scss";
+.menu {
+    width: 100%;
+    z-index: 10000;
+}
+.lists {
+    height: 60px
+}
+
+.edit {
+    top: 99px;
+    right: 165px;
+    position:absolute;
+}
+.lists li {
+    min-width: 5%;
+    cursor: pointer;
+    height: 100%;
+    line-height: 3;
+    padding: 0 5px;
+    text-align: center;
+}
+.lists li:hover {
+    background-color: #fff;
+    box-shadow: rgb(0 0 0 / 18%) 0px 5px 4px 0px
+}
+
+.menu .disc {
+    position: absolute;
+    display: none;
+    width: 100%;
+    top: 0;
+    background-color: #fff;
+    z-index: 1000;
+}
+
+#overlay{
+   height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.hovers {
+   display: block !important;
+    transition: all 0.5s ease-in-out
+}
+.category li {
+    list-style: none;
+    line-height: 3;
+    display: block;
+}
+.category a , .detail a , .catsColumn a {
+    text-decoration: none;
+    color: #000;
+}
+.selected  a{
+    color: $textColor;
+}
+.catagres .catagre {
+    display: none;
+}
+.topBar{
+    border-bottom: 1px solid rgb(241, 243, 249);
+    padding-bottom: 10px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: rgb(64, 69, 83);
+}
+.subtitle {
+    font-weight: 700;
+    cursor: default;
+}
+.detail a ,.catsColumn a {
+    line-height: 2.5;
+    display: block;
+}
+
+.detail a:hover , .catsColumn a:hover{
+    color: $textColor;
+}
+.heading {
+    font-size: 0.928571rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+    margin: 16px 2rem 16px 0 ;
+
+}
+.brandsColumn ul li {
+    padding: 5px;
+}
+.brandsColumn ul li img {
+    border: 1px solid #eee;
+    
+}

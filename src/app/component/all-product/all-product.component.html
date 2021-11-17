@@ -1,0 +1,38 @@
+<section id="card">
+    <div class="row">
+        <div class="col-md-2 my-5" *ngFor="let prod of prods">
+           <div class="card">
+                <div class="imgs ">
+                    <img class="w-100 h-100" [src]="prod.photo" alt="">
+                </div>
+                <div class="details">
+                    <span>اسم:{{prod.name_ar}}</span>
+                    <span>السعر: {{prod.price}}</span>
+                    <span>الوزن:{{prod.description_ar}}</span>
+                    <span><a routerLink="/details/show/{{prod.id}}">تفاصيل</a></span><!---->
+                </div>
+           </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<section class="position-fixed filter" #filters >
+    <div class="card info " [@openClose]="isOpen ? 'open' : 'closed'">
+        <div class="form d-flex flex-column">
+            <input type="text" [(ngModel)]="search" autocomplete="off" class="mb-3 form-control">
+            <div  class="d-flex justify-content-around my-2"  *ngFor="let cate of subCategory  | filter:search ; let index = index;"> 
+                <input  type="checkbox"  [id]="cate.id" [value]="cate.sub_category_name_ar" name="interests" class="mt-2 puts form-check-input" (click)="getProducts(cate.id)">
+                <label for="" class="form-check-label"> {{cate.sub_category_name_ar}}</label>
+                <span>({{index - index + allCount[index]}})</span>
+            </div>
+        </div>
+        <div class="icon" (click)="openFilter()">
+            <i class="fas fa-arrow-left fa-3x"></i>
+        </div>
+    </div>
+  
+</section>
+ 
